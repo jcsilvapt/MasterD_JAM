@@ -135,7 +135,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 324421af6e6d04b41911db0d04cc861a, type: 2}
+  - {fileID: 2100000, guid: 63077f442416b2b4f9fc8407bba2db77, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1799,7 +1799,7 @@ PrefabInstance:
     - target: {fileID: 2300000, guid: 9962aa3688d903d4987001bbf5af71b9, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 38d5337a827f8ae44b15f1e1ab48e95d, type: 2}
+      objectReference: {fileID: 2100000, guid: b97f72cbf353f0b40b3e36b7a4950835, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9962aa3688d903d4987001bbf5af71b9, type: 3}
 --- !u!4 &7149841500499720399 stripped
