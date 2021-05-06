@@ -15,6 +15,7 @@ public class PlayerScript : MonoBehaviour {
     [SerializeField] GameObject shootFrom;
     [SerializeField] GameObject prefab;
     [SerializeField] GameObject curvePoint;
+    [SerializeField] GameObject particleSystem;
 
     [SerializeField] bool hasShoot = false;
 
@@ -24,7 +25,6 @@ public class PlayerScript : MonoBehaviour {
     bool isToReturn = false;
 
     Rigidbody rb;
-    CharacterController c;
 
     private float time = 0.0f;
     private Vector3 bulletLastPosition;
@@ -33,7 +33,6 @@ public class PlayerScript : MonoBehaviour {
 
     private void Start() {
         rb = GetComponent<Rigidbody>();
-        c = GetComponent<CharacterController>();
     }
 
     private void FixedUpdate() {
@@ -59,11 +58,11 @@ public class PlayerScript : MonoBehaviour {
         }
 
         if (isToReturn) {
-            if(time < 1.0f) {
+            if (time < 1.0f) {
                 bullet.transform.position = getBQCPoint(time, bulletLastPosition, curvePoint.transform.position, transform.position);
                 time += Time.deltaTime;
             }
-            if(Vector3.Distance(transform.position, bullet.transform.position) < 1.25f) {
+            if (Vector3.Distance(transform.position, bullet.transform.position) < 1.25f) {
                 Destroy(bullet);
                 isToReturn = false;
                 hasShoot = false;
@@ -72,9 +71,18 @@ public class PlayerScript : MonoBehaviour {
     }
 
     void TeleportToBullet() {
-        transform.position = new Vector3(0, bullet.transform.position.y + 1f, bullet.transform.position.z);
+
+        GameObject playerPosition = Instantiate(particleSystem, transform);
+        GameObject bulletPosition = Instantiate(particleSystem, bullet.transform);
+        playerPosition.transform.parent = null;
+        playerPosition.GetComponentsInChildren<ParticleSystem>().Initialize();
+        bulletPosition.transform.parent = null;
+        bulletPosition.GetComponentsInChildren<ParticleSystem>().Initialize();
         Destroy(bullet);
+        Destroy(playerPosition, 5f);
+        Destroy(bulletPosition, 5f);
         hasShoot = false;
+        transform.position = new Vector3(0, bullet.transform.position.y + 1f, bullet.transform.position.z);
     }
 
     void ShootBullet() {
@@ -91,7 +99,7 @@ public class PlayerScript : MonoBehaviour {
         isToReturn = true;
         //bullet.GetComponent<Rigidbody>().isKinematic = true;
         bullet.GetComponent<Rigidbody>().velocity = Vector3.zero;
-        
+
 
 
     }
