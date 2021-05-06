@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMelee : Enemy
+public class EnemyMelee : Enemy, IDamage
 {
     [SerializeField] private BoxCollider swordCollider;
 
@@ -14,5 +14,9 @@ public class EnemyMelee : Enemy
     private void AttackOff()
     {
         swordCollider.enabled = false;
+    }
+
+    public void TakeDamage() {
+        Die();
     }
 }

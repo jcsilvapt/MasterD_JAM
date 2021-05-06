@@ -6,6 +6,8 @@ TagManager:
   tags:
   - MAST_Holder
   - Floor
+  - Ground
+  - Enemy
   layers:
   - Default
   - TransparentFX

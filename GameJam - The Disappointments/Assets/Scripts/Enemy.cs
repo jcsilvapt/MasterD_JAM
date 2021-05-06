@@ -65,7 +65,7 @@ public class Enemy : MonoBehaviour
     public void Die()
     {
         isAlive = false;
-        animator.Play("Dead");
+        animator.Play("Die");
     }
 
     public void SetEnemy(Transform playerUnit)

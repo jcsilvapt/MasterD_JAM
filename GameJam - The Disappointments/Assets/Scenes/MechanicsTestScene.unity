@@ -133,6 +133,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4063282431793653089, guid: 4e4e8a11c1060be469bc8a36ae29e96b,
+        type: 3}
+      propertyPath: jumpSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4063282431793653089, guid: 4e4e8a11c1060be469bc8a36ae29e96b,
+        type: 3}
+      propertyPath: jumpSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 622f42e8d781b8a44b119174e4ed9708, type: 3}
+    - target: {fileID: 4063282431793653089, guid: 4e4e8a11c1060be469bc8a36ae29e96b,
+        type: 3}
+      propertyPath: jumpSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 18524d7f295d11b40a2b7bd3d9ef3561, type: 3}
     - target: {fileID: 4605234816749142668, guid: 4e4e8a11c1060be469bc8a36ae29e96b,
         type: 3}
       propertyPath: m_RootOrder

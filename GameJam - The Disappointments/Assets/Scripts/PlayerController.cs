@@ -77,6 +77,13 @@ public class PlayerController : MonoBehaviour {
     //Camera Reference
     [SerializeField] MouseControl mControl;
 
+    [Header("Sound Controller")]
+    [SerializeField] AudioClip[] walkinSounds;
+    [SerializeField] AudioClip[] jumpSounds;
+    [SerializeField] AudioClip teleportSound;
+    AudioClip footClip;
+    AudioClip jumpClip;
+    AudioSource audioSource;
     //God of war Effect
 
     bool isToReturn = false;
@@ -90,6 +97,10 @@ public class PlayerController : MonoBehaviour {
         //Get References
         rb = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
+
+        //Disable Weapon PS
+        weaponPS.SetActive(false);
 
         //Set Flag
         hit = false;
@@ -143,18 +154,6 @@ public class PlayerController : MonoBehaviour {
                 GearCatch();
             }
         }
-
-        /*
-        if (Input.GetKeyDown(KeyCode.N) && !hasShoot)
-        {
-            ChangeAnimationState(AnimationStates["ThrowLeft"]);
-        }
-
-        if (Input.GetKeyDown(KeyCode.M) && !hasShoot)
-        {
-            ChangeAnimationState(AnimationStates["ThrowRight"]);
-        }
-        */
     }
 
     private void FixedUpdate() {
@@ -163,6 +162,11 @@ public class PlayerController : MonoBehaviour {
         if (!hit) {
             //Check if Player in on the Ground
             if (Physics.Raycast(transform.position, Vector3.down, rayDistance)) {
+                if(!isGrounded) {
+                    jumpClip = jumpSounds[Random.Range(0, jumpSounds.Length)];
+                    audioSource.clip = jumpClip;
+                    audioSource.Play();
+                }
                 isGrounded = true;
             } else {
                 isGrounded = false;
@@ -241,7 +245,8 @@ public class PlayerController : MonoBehaviour {
         gearPosition.GetComponentsInChildren<ParticleSystem>().Initialize();
         Destroy(playerPosition, 2f);
         Destroy(gearPosition, 2f);
-
+        audioSource.clip = teleportSound;
+        audioSource.Play();
         transform.position = new Vector3(gear.position.x, gear.position.y + 0.1f, 0);
 
         GearCatch();
@@ -255,6 +260,7 @@ public class PlayerController : MonoBehaviour {
         isToReturn = false;
         gear.SetParent(parentReference);
         gear.GetComponent<Gear>().SetDefaultSize();
+        weaponPS.SetActive(false);
     }
 
     /// <summary>
@@ -266,6 +272,7 @@ public class PlayerController : MonoBehaviour {
 
         isToReturn = true;
         gear.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        
     }
 
     #region Animator Controller Methods
@@ -291,12 +298,24 @@ public class PlayerController : MonoBehaviour {
         gear.GetComponent<BoxCollider>().enabled = true;
         gear.GetComponent<Gear>().SetBigSize();
         gear.SetParent(null);
+        weaponPS.SetActive(true);
         gearRB.AddForce(shootFrom.forward * throwPower, ForceMode.Impulse);
     }
 
     public void FinishedAnimation() {
         ChangeAnimationState(AnimationStates["Idle"]);
     }
+    #endregion
+
+
+    #region SFX
+
+    public void WalkSound() {
+        footClip = walkinSounds[Random.Range(0, walkinSounds.Length)];
+        audioSource.clip = footClip;
+        audioSource.Play();
+    }
+
     #endregion
 
 
