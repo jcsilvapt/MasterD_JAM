@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyRange : Enemy
 {
     [SerializeField] private GameObject bulletPrefab;
-    private Transform shootPoint;
+    [SerializeField] private Transform shootPoint;
 
     protected override void Attack()
     {
@@ -14,7 +14,8 @@ public class EnemyRange : Enemy
 
     private void Shoot()
     {
-        Instantiate(bulletPrefab, shootPoint.position, Quaternion.identity);
+        GameObject bullet = Instantiate(bulletPrefab, shootPoint.position, Quaternion.identity);
+        bullet.GetComponent<EnemyBullet>().SetRotation(-Vector3.right);
     }
 
     private void Trigger()

@@ -193,6 +193,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grass Block
       objectReference: {fileID: 0}
+    - target: {fileID: 5239733470665241491, guid: fc3606814b105d944aebbeed94d35dc4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc3606814b105d944aebbeed94d35dc4, type: 3}
 --- !u!4 &11582150 stripped
@@ -291,6 +296,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Grass Block
+      objectReference: {fileID: 0}
+    - target: {fileID: 5239733470665241491, guid: fc3606814b105d944aebbeed94d35dc4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc3606814b105d944aebbeed94d35dc4, type: 3}
@@ -466,6 +476,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grass Block
       objectReference: {fileID: 0}
+    - target: {fileID: 5239733470665241491, guid: fc3606814b105d944aebbeed94d35dc4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc3606814b105d944aebbeed94d35dc4, type: 3}
 --- !u!4 &118446254 stripped
@@ -564,6 +579,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Grass Block
+      objectReference: {fileID: 0}
+    - target: {fileID: 5239733470665241491, guid: fc3606814b105d944aebbeed94d35dc4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc3606814b105d944aebbeed94d35dc4, type: 3}
@@ -664,6 +684,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grass Block
       objectReference: {fileID: 0}
+    - target: {fileID: 5239733470665241491, guid: fc3606814b105d944aebbeed94d35dc4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc3606814b105d944aebbeed94d35dc4, type: 3}
 --- !u!4 &271216856 stripped
@@ -762,6 +787,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Grass Block
+      objectReference: {fileID: 0}
+    - target: {fileID: 5239733470665241491, guid: fc3606814b105d944aebbeed94d35dc4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc3606814b105d944aebbeed94d35dc4, type: 3}
@@ -862,6 +892,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grass Block
       objectReference: {fileID: 0}
+    - target: {fileID: 5239733470665241491, guid: fc3606814b105d944aebbeed94d35dc4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc3606814b105d944aebbeed94d35dc4, type: 3}
 --- !u!4 &452543983 stripped
@@ -889,12 +924,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0.5, z: 0}
---- !u!4 &457947719 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2793789944950597542, guid: f1f3609ebf7ac7b49b14c3e7c163e25c,
-    type: 3}
-  m_PrefabInstance: {fileID: 746796563}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &494270961
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -966,6 +995,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Grass Block
+      objectReference: {fileID: 0}
+    - target: {fileID: 5239733470665241491, guid: fc3606814b105d944aebbeed94d35dc4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc3606814b105d944aebbeed94d35dc4, type: 3}
@@ -1066,6 +1100,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grass Block
       objectReference: {fileID: 0}
+    - target: {fileID: 5239733470665241491, guid: fc3606814b105d944aebbeed94d35dc4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc3606814b105d944aebbeed94d35dc4, type: 3}
 --- !u!4 &504039017 stripped
@@ -1164,6 +1203,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Grass Block
+      objectReference: {fileID: 0}
+    - target: {fileID: 5239733470665241491, guid: fc3606814b105d944aebbeed94d35dc4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc3606814b105d944aebbeed94d35dc4, type: 3}
@@ -1264,6 +1308,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grass Block
       objectReference: {fileID: 0}
+    - target: {fileID: 5239733470665241491, guid: fc3606814b105d944aebbeed94d35dc4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc3606814b105d944aebbeed94d35dc4, type: 3}
 --- !u!4 &563158303 stripped
@@ -1362,6 +1411,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Grass Block
+      objectReference: {fileID: 0}
+    - target: {fileID: 5239733470665241491, guid: fc3606814b105d944aebbeed94d35dc4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc3606814b105d944aebbeed94d35dc4, type: 3}
@@ -1462,6 +1516,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grass Block
       objectReference: {fileID: 0}
+    - target: {fileID: 5239733470665241491, guid: fc3606814b105d944aebbeed94d35dc4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc3606814b105d944aebbeed94d35dc4, type: 3}
 --- !u!4 &668921328 stripped
@@ -1561,6 +1620,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grass Block
       objectReference: {fileID: 0}
+    - target: {fileID: 5239733470665241491, guid: fc3606814b105d944aebbeed94d35dc4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc3606814b105d944aebbeed94d35dc4, type: 3}
 --- !u!4 &718561032 stripped
@@ -1595,11 +1659,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1892651152}
     m_Modifications:
-    - target: {fileID: 471870604333474332, guid: f1f3609ebf7ac7b49b14c3e7c163e25c,
-        type: 3}
-      propertyPath: cooldownTime
-      value: 2.5
-      objectReference: {fileID: 0}
     - target: {fileID: 1416410776888726438, guid: f1f3609ebf7ac7b49b14c3e7c163e25c,
         type: 3}
       propertyPath: m_RootOrder
@@ -1634,6 +1693,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1793499952254322972, guid: f1f3609ebf7ac7b49b14c3e7c163e25c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3849026147545612235, guid: f1f3609ebf7ac7b49b14c3e7c163e25c,
         type: 3}
@@ -1790,6 +1854,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grass Block
       objectReference: {fileID: 0}
+    - target: {fileID: 5239733470665241491, guid: fc3606814b105d944aebbeed94d35dc4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc3606814b105d944aebbeed94d35dc4, type: 3}
 --- !u!4 &759979503 stripped
@@ -1888,6 +1957,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Grass Block
+      objectReference: {fileID: 0}
+    - target: {fileID: 5239733470665241491, guid: fc3606814b105d944aebbeed94d35dc4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc3606814b105d944aebbeed94d35dc4, type: 3}
@@ -1988,6 +2062,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grass Block
       objectReference: {fileID: 0}
+    - target: {fileID: 5239733470665241491, guid: fc3606814b105d944aebbeed94d35dc4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc3606814b105d944aebbeed94d35dc4, type: 3}
 --- !u!4 &767696504 stripped
@@ -2086,6 +2165,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Grass Block
+      objectReference: {fileID: 0}
+    - target: {fileID: 5239733470665241491, guid: fc3606814b105d944aebbeed94d35dc4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc3606814b105d944aebbeed94d35dc4, type: 3}
@@ -2186,6 +2270,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grass Block
       objectReference: {fileID: 0}
+    - target: {fileID: 5239733470665241491, guid: fc3606814b105d944aebbeed94d35dc4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc3606814b105d944aebbeed94d35dc4, type: 3}
 --- !u!4 &810547741 stripped
@@ -2284,6 +2373,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Grass Block
+      objectReference: {fileID: 0}
+    - target: {fileID: 5239733470665241491, guid: fc3606814b105d944aebbeed94d35dc4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc3606814b105d944aebbeed94d35dc4, type: 3}
@@ -2384,6 +2478,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grass Block
       objectReference: {fileID: 0}
+    - target: {fileID: 5239733470665241491, guid: fc3606814b105d944aebbeed94d35dc4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc3606814b105d944aebbeed94d35dc4, type: 3}
 --- !u!4 &860594959 stripped
@@ -2482,6 +2581,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Grass Block
+      objectReference: {fileID: 0}
+    - target: {fileID: 5239733470665241491, guid: fc3606814b105d944aebbeed94d35dc4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc3606814b105d944aebbeed94d35dc4, type: 3}
@@ -2582,6 +2686,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grass Block
       objectReference: {fileID: 0}
+    - target: {fileID: 5239733470665241491, guid: fc3606814b105d944aebbeed94d35dc4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc3606814b105d944aebbeed94d35dc4, type: 3}
 --- !u!4 &1054006817 stripped
@@ -2680,6 +2789,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Grass Block
+      objectReference: {fileID: 0}
+    - target: {fileID: 5239733470665241491, guid: fc3606814b105d944aebbeed94d35dc4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc3606814b105d944aebbeed94d35dc4, type: 3}
@@ -2780,6 +2894,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grass Block
       objectReference: {fileID: 0}
+    - target: {fileID: 5239733470665241491, guid: fc3606814b105d944aebbeed94d35dc4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc3606814b105d944aebbeed94d35dc4, type: 3}
 --- !u!4 &1068662664 stripped
@@ -2878,6 +2997,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Grass Block
+      objectReference: {fileID: 0}
+    - target: {fileID: 5239733470665241491, guid: fc3606814b105d944aebbeed94d35dc4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc3606814b105d944aebbeed94d35dc4, type: 3}
@@ -3070,6 +3194,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grass Block
       objectReference: {fileID: 0}
+    - target: {fileID: 5239733470665241491, guid: fc3606814b105d944aebbeed94d35dc4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc3606814b105d944aebbeed94d35dc4, type: 3}
 --- !u!4 &1152336135 stripped
@@ -3168,6 +3297,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Grass Block
+      objectReference: {fileID: 0}
+    - target: {fileID: 5239733470665241491, guid: fc3606814b105d944aebbeed94d35dc4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc3606814b105d944aebbeed94d35dc4, type: 3}
@@ -3268,6 +3402,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grass Block
       objectReference: {fileID: 0}
+    - target: {fileID: 5239733470665241491, guid: fc3606814b105d944aebbeed94d35dc4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc3606814b105d944aebbeed94d35dc4, type: 3}
 --- !u!4 &1204474015 stripped
@@ -3367,6 +3506,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grass Block
       objectReference: {fileID: 0}
+    - target: {fileID: 5239733470665241491, guid: fc3606814b105d944aebbeed94d35dc4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc3606814b105d944aebbeed94d35dc4, type: 3}
 --- !u!4 &1287477192 stripped
@@ -3403,9 +3547,9 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2519746503619570952, guid: 5df47fc8cd3ca004593a6cc7e471efe4,
         type: 3}
-      propertyPath: cooldownTime
-      value: 3
-      objectReference: {fileID: 0}
+      propertyPath: swordCollider
+      value: 
+      objectReference: {fileID: 1683657258}
     - target: {fileID: 2519746503619570954, guid: 5df47fc8cd3ca004593a6cc7e471efe4,
         type: 3}
       propertyPath: m_Constraints
@@ -3514,101 +3658,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1307372492}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1307372494 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1157665188465475302, guid: 5df47fc8cd3ca004593a6cc7e471efe4,
-    type: 3}
-  m_PrefabInstance: {fileID: 1307372492}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &1337584020
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1307372494}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: d9e13c7461298844f8da5010cd85ab35,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: d9e13c7461298844f8da5010cd85ab35,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: d9e13c7461298844f8da5010cd85ab35,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: d9e13c7461298844f8da5010cd85ab35,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: d9e13c7461298844f8da5010cd85ab35,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: d9e13c7461298844f8da5010cd85ab35,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: d9e13c7461298844f8da5010cd85ab35,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.045
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: d9e13c7461298844f8da5010cd85ab35,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: d9e13c7461298844f8da5010cd85ab35,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: d9e13c7461298844f8da5010cd85ab35,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: d9e13c7461298844f8da5010cd85ab35,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: d9e13c7461298844f8da5010cd85ab35,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: d9e13c7461298844f8da5010cd85ab35,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: d9e13c7461298844f8da5010cd85ab35,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: -7511558181221131132, guid: d9e13c7461298844f8da5010cd85ab35,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 0bc592e9600f9e34d9500982c7b48a6d, type: 2}
-    - target: {fileID: 919132149155446097, guid: d9e13c7461298844f8da5010cd85ab35,
-        type: 3}
-      propertyPath: m_Name
-      value: Sword02
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d9e13c7461298844f8da5010cd85ab35, type: 3}
 --- !u!1001 &1361330999
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3681,6 +3730,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grass Block
       objectReference: {fileID: 0}
+    - target: {fileID: 5239733470665241491, guid: fc3606814b105d944aebbeed94d35dc4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc3606814b105d944aebbeed94d35dc4, type: 3}
 --- !u!4 &1361331000 stripped
@@ -3708,63 +3762,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0.5, z: 0}
---- !u!1001 &1375175534
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 457947719}
-    m_Modifications:
-    - target: {fileID: 100000, guid: 185e3abace8ae3145ab66435fd2e1a7f, type: 3}
-      propertyPath: m_Name
-      value: rifle_battlerifle
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 185e3abace8ae3145ab66435fd2e1a7f, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 185e3abace8ae3145ab66435fd2e1a7f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.049
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 185e3abace8ae3145ab66435fd2e1a7f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.129
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 185e3abace8ae3145ab66435fd2e1a7f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.04
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 185e3abace8ae3145ab66435fd2e1a7f, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.40374357
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 185e3abace8ae3145ab66435fd2e1a7f, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.35630578
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 185e3abace8ae3145ab66435fd2e1a7f, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.5575596
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 185e3abace8ae3145ab66435fd2e1a7f, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.6317948
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 185e3abace8ae3145ab66435fd2e1a7f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -82.857
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 185e3abace8ae3145ab66435fd2e1a7f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -0.001
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 185e3abace8ae3145ab66435fd2e1a7f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 114.840004
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 185e3abace8ae3145ab66435fd2e1a7f, type: 3}
 --- !u!1001 &1375250796
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3836,6 +3833,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Grass Block
+      objectReference: {fileID: 0}
+    - target: {fileID: 5239733470665241491, guid: fc3606814b105d944aebbeed94d35dc4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc3606814b105d944aebbeed94d35dc4, type: 3}
@@ -3936,6 +3938,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grass Block
       objectReference: {fileID: 0}
+    - target: {fileID: 5239733470665241491, guid: fc3606814b105d944aebbeed94d35dc4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc3606814b105d944aebbeed94d35dc4, type: 3}
 --- !u!4 &1421174595 stripped
@@ -4034,6 +4041,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Grass Block
+      objectReference: {fileID: 0}
+    - target: {fileID: 5239733470665241491, guid: fc3606814b105d944aebbeed94d35dc4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc3606814b105d944aebbeed94d35dc4, type: 3}
@@ -4134,6 +4146,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grass Block
       objectReference: {fileID: 0}
+    - target: {fileID: 5239733470665241491, guid: fc3606814b105d944aebbeed94d35dc4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc3606814b105d944aebbeed94d35dc4, type: 3}
 --- !u!4 &1462696758 stripped
@@ -4232,6 +4249,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Grass Block
+      objectReference: {fileID: 0}
+    - target: {fileID: 5239733470665241491, guid: fc3606814b105d944aebbeed94d35dc4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc3606814b105d944aebbeed94d35dc4, type: 3}
@@ -4332,6 +4354,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grass Block
       objectReference: {fileID: 0}
+    - target: {fileID: 5239733470665241491, guid: fc3606814b105d944aebbeed94d35dc4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc3606814b105d944aebbeed94d35dc4, type: 3}
 --- !u!4 &1593488641 stripped
@@ -4430,6 +4457,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Grass Block
+      objectReference: {fileID: 0}
+    - target: {fileID: 5239733470665241491, guid: fc3606814b105d944aebbeed94d35dc4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc3606814b105d944aebbeed94d35dc4, type: 3}
@@ -4604,6 +4636,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grass Block
       objectReference: {fileID: 0}
+    - target: {fileID: 5239733470665241491, guid: fc3606814b105d944aebbeed94d35dc4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc3606814b105d944aebbeed94d35dc4, type: 3}
 --- !u!4 &1669132580 stripped
@@ -4631,25 +4668,12 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0.5, z: 0}
---- !u!1 &1683657254 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d9e13c7461298844f8da5010cd85ab35,
-    type: 3}
-  m_PrefabInstance: {fileID: 1337584020}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1683657255
+--- !u!65 &1683657258 stripped
 BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 6067005851119129983, guid: 5df47fc8cd3ca004593a6cc7e471efe4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1307372492}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1683657254}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.25397795, y: 1.2088152, z: 0.05193178}
-  m_Center: {x: 0.0000014201777, y: 0.43456262, z: -0.00000001706768}
 --- !u!1001 &1719333564
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4721,6 +4745,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Grass Block
+      objectReference: {fileID: 0}
+    - target: {fileID: 5239733470665241491, guid: fc3606814b105d944aebbeed94d35dc4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc3606814b105d944aebbeed94d35dc4, type: 3}
@@ -4821,6 +4850,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grass Block
       objectReference: {fileID: 0}
+    - target: {fileID: 5239733470665241491, guid: fc3606814b105d944aebbeed94d35dc4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc3606814b105d944aebbeed94d35dc4, type: 3}
 --- !u!4 &1810747266 stripped
@@ -4919,6 +4953,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Grass Block
+      objectReference: {fileID: 0}
+    - target: {fileID: 5239733470665241491, guid: fc3606814b105d944aebbeed94d35dc4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc3606814b105d944aebbeed94d35dc4, type: 3}
@@ -5050,6 +5089,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Grass Block
+      objectReference: {fileID: 0}
+    - target: {fileID: 5239733470665241491, guid: fc3606814b105d944aebbeed94d35dc4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc3606814b105d944aebbeed94d35dc4, type: 3}
@@ -5243,6 +5287,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grass Block
       objectReference: {fileID: 0}
+    - target: {fileID: 5239733470665241491, guid: fc3606814b105d944aebbeed94d35dc4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Floor
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc3606814b105d944aebbeed94d35dc4, type: 3}
 --- !u!4 &2009368931 stripped
@@ -5341,6 +5390,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Grass Block
+      objectReference: {fileID: 0}
+    - target: {fileID: 5239733470665241491, guid: fc3606814b105d944aebbeed94d35dc4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc3606814b105d944aebbeed94d35dc4, type: 3}
