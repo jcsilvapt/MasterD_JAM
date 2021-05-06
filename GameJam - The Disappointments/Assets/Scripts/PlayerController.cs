@@ -199,6 +199,11 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+
+    public void Die()
+    {
+        hit = true;
+    }
     #region Animator Controller Methods
     private void ChangeAnimationState(string newState)
     {

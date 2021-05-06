@@ -4,14 +4,21 @@ using UnityEngine;
 
 public class EnemyRange : Enemy
 {
+    [SerializeField] private GameObject bulletPrefab;
+    private Transform shootPoint;
+
     protected override void Attack()
     {
         base.Attack();
-        Shoot();
     }
 
     private void Shoot()
     {
+        Instantiate(bulletPrefab, shootPoint.position, Quaternion.identity);
+    }
 
+    private void Trigger()
+    {
+        Shoot();
     }
 }

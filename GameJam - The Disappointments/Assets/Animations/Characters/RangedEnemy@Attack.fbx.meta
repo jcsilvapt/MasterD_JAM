@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ebc9240115fb88b498faa62d9670bcfb
+guid: 57fa547732a8cc84fbc359e0f98bb070
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable:
@@ -39,7 +39,7 @@ ModelImporter:
       takeName: mixamo.com
       internalID: 0
       firstFrame: 0
-      lastFrame: 104
+      lastFrame: 55
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -59,15 +59,8 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.30726257
-        functionName: AttackOn
-        data: 
-        objectReferenceParameter: {instanceID: 0}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
-      - time: 0.47486034
-        functionName: AttackOff
+      - time: 0.15083799
+        functionName: Trigger
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
