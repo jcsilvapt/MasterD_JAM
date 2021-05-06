@@ -34,6 +34,7 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private Animator animatorLevelSelectLeftButton;
     [SerializeField] private Animator animatorLevelSelectLevelButton;
     [SerializeField] private Animator animatorLevelSelectRightButton;
+    [SerializeField] private Animator animatorLevelSelectLevelPreview;
     [SerializeField] private Animator animatorLevelSelectBackButton;
 
     private void Start()
@@ -169,6 +170,7 @@ public class MenuManager : MonoBehaviour
                 animatorLevelSelectLeftButton.SetBool("Show", false);
                 animatorLevelSelectLevelButton.SetBool("Show", false);
                 animatorLevelSelectRightButton.SetBool("Show", false);
+                animatorLevelSelectLevelPreview.SetBool("Show", false);
                 animatorLevelSelectBackButton.SetBool("Show", false);
                 break;
         }
