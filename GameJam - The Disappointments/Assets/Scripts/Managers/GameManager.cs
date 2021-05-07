@@ -1,9 +1,8 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 
@@ -21,7 +20,8 @@ public class GameManager : MonoBehaviour {
     [SerializeField] GameObject pauseMenu;
     [SerializeField] GameObject loseMenu;
     [SerializeField] GameObject winMenu;
-    [SerializeField] GameObject OptionsMenu;
+    [SerializeField] GameObject optionsMenu;
+    [SerializeField] GameObject endMenu;
     [SerializeField] Slider s_masterVolume;
     [SerializeField] Slider s_musicVolume;
     [SerializeField] Slider s_sfxVolume;
@@ -58,7 +58,7 @@ public class GameManager : MonoBehaviour {
     /// <returns></returns>
     private float GetSoundsLevel(string mixerName) {
         float value;
-        if(audioMixer.GetFloat(mixerName, out value)) {
+        if (audioMixer.GetFloat(mixerName, out value)) {
             return value;
         }
         return -80f;
@@ -74,6 +74,7 @@ public class GameManager : MonoBehaviour {
     private void Pause(bool value) {
         isPaused = value;
         pauseMenu.SetActive(isPaused);
+        UI_CloseOptions();
         Time.timeScale = isPaused ? 0 : 1;
     }
 
@@ -121,6 +122,11 @@ public class GameManager : MonoBehaviour {
         loseMenu.SetActive(true);
     }
 
+    private void PlayerWon() {
+        PauseByExtra();
+        endMenu.SetActive(true);
+    }
+
     #endregion
 
     #region AUDIO
@@ -143,7 +149,7 @@ public class GameManager : MonoBehaviour {
 
 
     public static float GetMixerVolume(string mixerName) {
-        if(instance != null) {
+        if (instance != null) {
             return instance.GetSoundsLevel(mixerName);
         }
         return -80f;
@@ -163,6 +169,12 @@ public class GameManager : MonoBehaviour {
     public static void PlayerWin() {
         if (instance != null) {
             instance.PlayerWonLevel();
+        }
+    }
+
+    public static void PlayerWonTheGame() {
+        if (instance != null) {
+            instance.PlayerWon();
         }
     }
 
@@ -248,11 +260,13 @@ public class GameManager : MonoBehaviour {
 
     public void UI_Resume() {
         Pause(false);
+        UI_CloseOptions();
     }
 
     public void UI_Restart() {
         _ChangeScene(SceneManager.GetActiveScene().buildIndex, false);
         Pause(false);
+        UI_CloseOptions();
         loseMenu.SetActive(false);
         winMenu.SetActive(false);
     }
@@ -260,12 +274,15 @@ public class GameManager : MonoBehaviour {
     public void UI_Quit() {
         _ChangeScene(0, false);
         Pause(false);
+        UI_CloseOptions();
         loseMenu.SetActive(false);
         winMenu.SetActive(false);
+        endMenu.SetActive(false);
     }
 
     public void UI_LoadNextLevel() {
         LoadNextLevel();
+        UI_CloseOptions();
     }
 
     public void UI_MasterVolume(float value) {
@@ -279,15 +296,15 @@ public class GameManager : MonoBehaviour {
     }
 
     public void UI_OpenOptions() {
-        OptionsMenu.SetActive(true);
+        optionsMenu.SetActive(true);
     }
 
     public void UI_CloseOptions() {
-        OptionsMenu.SetActive(false);
+        optionsMenu.SetActive(false);
     }
 
-    public void UI_secas() {
-        //TODO:
+    public void UI_ShowEndedMenu() {
+        endMenu.SetActive(true);
     }
 
     #endregion
