@@ -66,6 +66,8 @@ public class Enemy : MonoBehaviour
     {
         isAlive = false;
         animator.Play("Die");
+        GetComponent<Rigidbody>().isKinematic = true;
+        GetComponent<CapsuleCollider>().enabled = false;
     }
 
     public void SetEnemy(Transform playerUnit)

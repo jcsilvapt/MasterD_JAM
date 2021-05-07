@@ -16,8 +16,8 @@ public class EnemyRange : Enemy, IDamage {
     }
 
     private void Shoot() {
-        GameObject bullet = Instantiate(bulletPrefab, shootPoint.position, Quaternion.identity);
-        bullet.GetComponent<EnemyBullet>().SetRotation(-Vector3.right);
+        GameObject bullet = Instantiate(bulletPrefab, shootPoint.position, shootPoint.rotation);
+        bullet.GetComponent<EnemyBullet>().SetRotation(GameObject.FindGameObjectWithTag("Player").transform.position);
         aSource.Play();
     }
 

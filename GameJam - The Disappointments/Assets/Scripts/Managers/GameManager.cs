@@ -51,11 +51,20 @@ public class GameManager : MonoBehaviour {
         Time.timeScale = isPaused ? 0 : 1;
     }
 
+    /// <summary>
+    /// Function that change the Scene
+    /// if AllowLoadScreen is true, there will be a LoadScreen Showing up while loading.
+    /// </summary>
+    /// <param name="sceneIndex">Index of the scene</param>
+    /// <param name="allowLoadScreen">true - Load Screen will pop-up</param>
     private void _ChangeScene(int sceneIndex, bool allowLoadScreen) {
         if (allowLoadScreen) {
             loadCanvas.SetActive(true);
             StartCoroutine(LoadScene(sceneIndex));
         } else {
+            if (isPaused) {
+                Pause(false);
+            }
             SceneManager.LoadScene(sceneIndex);
         }
     }
@@ -102,13 +111,13 @@ public class GameManager : MonoBehaviour {
     #region WRAPPERS
 
     public static void PlayerLose() {
-        if(instance != null) {
+        if (instance != null) {
             instance.StartCoroutine(instance.ShowDeadScreen());
         }
     }
 
     public static void PlayerWin() {
-        if(instance != null) {
+        if (instance != null) {
             instance.PlayerWonLevel();
         }
     }
@@ -205,7 +214,7 @@ public class GameManager : MonoBehaviour {
     }
 
     public void UI_Quit() {
-        CloseGame();
+        _ChangeScene(0, false);
     }
 
     public void UI_LoadNextLevel() {

@@ -24,6 +24,7 @@ public class EnemyBullet : MonoBehaviour
     public void SetRotation(Vector3 direction)
     {
         rotation = direction;
+        Debug.Log(rotation);
     }
 
     private void OnTriggerEnter(Collider other)
