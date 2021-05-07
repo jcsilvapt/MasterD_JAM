@@ -23,6 +23,9 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private GameObject levelSelect;
     [SerializeField] private GameObject optionsMenu;
     [SerializeField] private GameObject creditsMenu;
+    [SerializeField] private Slider s_masterVolume;
+    [SerializeField] private Slider s_musicVolume;
+    [SerializeField] private Slider s_sfxVolume;
 
     //Main Menu Animator References
     [SerializeField] private Animator animatorMainMenuPlayButton;
@@ -68,6 +71,11 @@ public class MenuManager : MonoBehaviour
         currentLevel = 1;
 
         currentMenu = Menu.TitleScreen;
+
+        s_masterVolume.value = GameManager.GetMixerVolume("master");
+        s_musicVolume.value = GameManager.GetMixerVolume("music");
+        s_sfxVolume.value = GameManager.GetMixerVolume("sfx");
+
     }
 
     private void Update()

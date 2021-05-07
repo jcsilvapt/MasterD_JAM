@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour {
     [SerializeField] GameObject pauseMenu;
     [SerializeField] GameObject loseMenu;
     [SerializeField] GameObject winMenu;
+    [SerializeField] GameObject OptionsMenu;
     [SerializeField] Slider s_masterVolume;
     [SerializeField] Slider s_musicVolume;
     [SerializeField] Slider s_sfxVolume;
@@ -50,6 +51,18 @@ public class GameManager : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// Function that gets the current value of the sound mixer.
+    /// </summary>
+    /// <param name="mixerName">master, music, sfx</param>
+    /// <returns></returns>
+    private float GetSoundsLevel(string mixerName) {
+        float value;
+        if(audioMixer.GetFloat(mixerName, out value)) {
+            return value;
+        }
+        return -80f;
+    }
 
     #region LOGIC
 
@@ -127,6 +140,15 @@ public class GameManager : MonoBehaviour {
     #endregion
 
     #region WRAPPERS
+
+
+    public static float GetMixerVolume(string mixerName) {
+        if(instance != null) {
+            return instance.GetSoundsLevel(mixerName);
+        }
+        return -80f;
+    }
+
 
     public static void PlayerLose(bool needAnimation) {
         if (instance != null) {
@@ -254,6 +276,14 @@ public class GameManager : MonoBehaviour {
     }
     public void UI_SFXVolume(float value) {
         SetSFXVolume(value);
+    }
+
+    public void UI_OpenOptions() {
+        OptionsMenu.SetActive(true);
+    }
+
+    public void UI_CloseOptions() {
+        OptionsMenu.SetActive(false);
     }
 
     #endregion
