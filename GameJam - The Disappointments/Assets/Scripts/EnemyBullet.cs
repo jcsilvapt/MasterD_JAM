@@ -7,8 +7,6 @@ public class EnemyBullet : MonoBehaviour
     private Rigidbody rb;
     [SerializeField] private float bulletSpeed;
 
-    private Vector3 rotation;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -18,15 +16,8 @@ public class EnemyBullet : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        rb.velocity = rotation * bulletSpeed;
+        rb.velocity = transform.forward * bulletSpeed;
     }
-
-    public void SetRotation(Vector3 direction)
-    {
-        rotation = direction;
-        Debug.Log(rotation);
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Player")
