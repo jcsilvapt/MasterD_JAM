@@ -286,6 +286,10 @@ public class GameManager : MonoBehaviour {
         OptionsMenu.SetActive(false);
     }
 
+    public void UI_secas() {
+        //TODO:
+    }
+
     #endregion
 
     #region COROUTINES
