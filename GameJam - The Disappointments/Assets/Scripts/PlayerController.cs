@@ -247,7 +247,7 @@ public class PlayerController : MonoBehaviour {
 
     public void Die() {
         hit = true;
-        GameManager.PlayerLose();
+        GameManager.PlayerLose(true);
     }
 
     private bool IsAnimatorPlaying() {
@@ -289,6 +289,7 @@ public class PlayerController : MonoBehaviour {
     /// Function that returns the gear to the player
     /// </summary>
     private void ReturnGear() {
+        gear.GetComponent<Gear>().SetActiveGear();
         time = 0.0f;
         gearLastPosition = gear.position;
 

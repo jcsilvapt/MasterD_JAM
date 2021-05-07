@@ -69,4 +69,9 @@ public class Gear : MonoBehaviour {
         transform.localRotation = defaultRotation;
         transform.localScale = defaultScale;
     }
+
+    public void SetActiveGear() {
+        isActive = true;
+    }
+
 }

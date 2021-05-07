@@ -137,6 +137,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: WeaponTrail
       objectReference: {fileID: 0}
+    - target: {fileID: 3576063838809792671, guid: 40ec8e72d76522847b7a40ac60b4867a,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 5923393368270505263, guid: 40ec8e72d76522847b7a40ac60b4867a,
         type: 3}
       propertyPath: ColorModule.gradient.maxGradient.key0.b

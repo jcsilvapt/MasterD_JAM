@@ -110,9 +110,13 @@ public class GameManager : MonoBehaviour {
 
     #region WRAPPERS
 
-    public static void PlayerLose() {
+    public static void PlayerLose(bool needAnimation) {
         if (instance != null) {
-            instance.StartCoroutine(instance.ShowDeadScreen());
+            if (needAnimation) {
+                instance.StartCoroutine(instance.ShowDeadScreen());
+            } else {
+                instance.PlayerLostLevel();
+            }
         }
     }
 
