@@ -5,9 +5,14 @@ using UnityEngine;
 public class Objective : MonoBehaviour {
 
     [SerializeField] bool isFinalMap = false;
-    [SerializeField] Transform FinalAnimation;
+    [SerializeField] GameObject camera;
 
     private bool hasEnded = false;
+
+    private void Start() {
+        if(camera != null)
+            camera.SetActive(false);
+    }
 
     private void Update() {
         if (hasEnded) {
@@ -28,9 +33,8 @@ public class Objective : MonoBehaviour {
 
 
     IEnumerator gameEnded() {
-
-        GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<MeshRenderer>().enabled = false;
-        GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<SkinnedMeshRenderer>().enabled = false;
+        GameObject.FindGameObjectWithTag("Player").SetActive(false);
+        camera.SetActive(true);
         yield return new WaitForSeconds(1f);
         GameManager.PlayerWonTheGame();
     }

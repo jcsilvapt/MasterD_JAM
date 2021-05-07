@@ -112,22 +112,12 @@ public class PlayerController : MonoBehaviour {
     void Update() {
 
         if (!GameManager.IsGamePaused()) {
-            
+
             //Detect Player Movement Input
             movement = new Vector3(Input.GetAxisRaw("Horizontal"), 0, 0);
 
             if (isGrounded && Input.GetKeyDown(KeyCode.Space)) {
                 jump = true;
-            }
-
-            if (Input.GetKeyDown(KeyCode.R)) {
-                transform.position = new Vector3(0.5f, .01f, 0);
-                hit = false;
-                isAlive = true;
-            }
-            //TODO: ISTO É PARA SER APAGADO DEPOIS
-            if (Input.GetKeyDown(KeyCode.T)) {
-                Die();
             }
 
             if (!hasShoot && !isToReturn && !GameManager.IsGamePaused()) {
@@ -357,5 +347,9 @@ public class PlayerController : MonoBehaviour {
         // (u^2 * p0) + (2 * u * t * p1) + (t^2 * p2)
         Vector3 p = (uu * p0) + (2 * u * t * p1) + (tt * p2);
         return p;
+    }
+
+    public void RecallGear() {
+        ReturnGear();
     }
 }

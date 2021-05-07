@@ -4402,7 +4402,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFinalMap: 0
-  FinalAnimation: {fileID: 0}
+  camera: {fileID: 0}
 --- !u!1001 &1486869513
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6928,7 +6928,7 @@ PrefabInstance:
     - target: {fileID: 4330815182851236947, guid: 90256c23168e3664da8c09299997242e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 4330815182851236947, guid: 90256c23168e3664da8c09299997242e,
         type: 3}

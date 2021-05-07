@@ -46,6 +46,9 @@ public class Gear : MonoBehaviour {
                     rb.isKinematic = true;
                     isActive = false;
                 }
+                if(other.tag == "Fall") {
+                    GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().RecallGear();
+                }
             }
         }
     }

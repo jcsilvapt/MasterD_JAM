@@ -5418,6 +5418,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4399202597267988537, guid: f1f3609ebf7ac7b49b14c3e7c163e25c,
+        type: 3}
+      propertyPath: m_Radius
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7149841500765025266, guid: f1f3609ebf7ac7b49b14c3e7c163e25c,
         type: 3}
       propertyPath: m_RootOrder
@@ -8066,7 +8071,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFinalMap: 1
-  FinalAnimation: {fileID: 1096716532}
+  camera: {fileID: 1250277263}
 --- !u!135 &1096716529
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -9800,6 +9805,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4399202597267988537, guid: f1f3609ebf7ac7b49b14c3e7c163e25c,
+        type: 3}
+      propertyPath: m_Radius
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7149841500765025266, guid: f1f3609ebf7ac7b49b14c3e7c163e25c,
         type: 3}
@@ -14445,7 +14455,7 @@ PrefabInstance:
     - target: {fileID: 4330815182851236947, guid: 90256c23168e3664da8c09299997242e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.22
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 4330815182851236947, guid: 90256c23168e3664da8c09299997242e,
         type: 3}
