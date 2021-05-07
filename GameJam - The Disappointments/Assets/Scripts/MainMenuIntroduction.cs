@@ -13,12 +13,18 @@ public class MainMenuIntroduction : MonoBehaviour
     [SerializeField] private GameObject particles;
     [SerializeField] private GameObject player;
 
+    [Header("Sound")]
+    [SerializeField] AudioClip teleportSound;
+    [SerializeField] AudioClip gearSound;
+    AudioSource aSource;
+
     private bool doneAnimation;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
         meshRenderer = GetComponent<MeshRenderer>();
+        aSource = GetComponent<AudioSource>();
 
         doneAnimation = false;
     }
@@ -34,6 +40,8 @@ public class MainMenuIntroduction : MonoBehaviour
                 meshRenderer.enabled = false;
                 GameObject particlesS = Instantiate(particles, transform);
                 particlesS.GetComponentsInChildren<ParticleSystem>().Initialize();
+                aSource.clip = teleportSound;
+                aSource.Play();
                 player.SetActive(true);
 
                 doneAnimation = true;

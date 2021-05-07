@@ -26,11 +26,6 @@ public class Gear : MonoBehaviour {
         defaultLocation = transform.localPosition;
         defaultRotation = transform.localRotation;
         defaultScale = transform.localScale;
-        /*
-        isActive = true;
-        transform.eulerAngles = Vector3.zero;
-        transform.localScale = new Vector3(0.6f, 0.6f, 0.6f);
-        */
     }
 
     private void FixedUpdate() {

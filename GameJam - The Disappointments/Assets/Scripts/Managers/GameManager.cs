@@ -21,17 +21,35 @@ public class GameManager : MonoBehaviour {
     [SerializeField] GameObject pauseMenu;
     [SerializeField] GameObject loseMenu;
     [SerializeField] GameObject winMenu;
+    [SerializeField] Slider s_masterVolume;
+    [SerializeField] Slider s_musicVolume;
+    [SerializeField] Slider s_sfxVolume;
 
     private bool isPaused = false;
 
     private void Awake() {
         if (instance == null) {
             instance = this;
+            SetSoundsLevel();
             DontDestroyOnLoad(gameObject);
         } else {
             Destroy(gameObject);
         }
     }
+
+    private void SetSoundsLevel() {
+        float value;
+        if (audioMixer.GetFloat("master", out value)) {
+            s_masterVolume.value = value;
+        }
+        if (audioMixer.GetFloat("music", out value)) {
+            s_musicVolume.value = value;
+        }
+        if (audioMixer.GetFloat("sfx", out value)) {
+            s_sfxVolume.value = value;
+        }
+    }
+
 
     #region LOGIC
 
@@ -226,6 +244,16 @@ public class GameManager : MonoBehaviour {
 
     public void UI_LoadNextLevel() {
         LoadNextLevel();
+    }
+
+    public void UI_MasterVolume(float value) {
+        SetMasterVolume(value);
+    }
+    public void UI_MusicVolume(float value) {
+        SetMusicVolume(value);
+    }
+    public void UI_SFXVolume(float value) {
+        SetSFXVolume(value);
     }
 
     #endregion
