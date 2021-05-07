@@ -10,6 +10,9 @@ public class MouseControl : MonoBehaviour {
     Vector3 lookingAt;
 
     private void Update() {
+        if(GameManager.IsGamePaused()) {
+            return;
+        }
         var mousePas = Input.mousePosition;
 
         lookingAt = Camera.main.ScreenToWorldPoint(new Vector3(mousePas.x, mousePas.y, 5));

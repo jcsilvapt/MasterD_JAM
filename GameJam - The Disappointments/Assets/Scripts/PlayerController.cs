@@ -110,127 +110,148 @@ public class PlayerController : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        //Detect Player Movement Input
-        movement = new Vector3(Input.GetAxisRaw("Horizontal"), 0, 0);
 
-        if (isGrounded && Input.GetKeyDown(KeyCode.Space)) {
-            jump = true;
-        }
+        if (!GameManager.IsGamePaused()) {
+            
+            //Detect Player Movement Input
+            movement = new Vector3(Input.GetAxisRaw("Horizontal"), 0, 0);
 
-        if (Input.GetKeyDown(KeyCode.R)) {
-            transform.position = new Vector3(0.5f, .01f, 0);
-            hit = false;
-            isAlive = true;
-        }
+            if (isGrounded && Input.GetKeyDown(KeyCode.Space)) {
+                jump = true;
+            }
 
-        if (Input.GetKeyDown(KeyCode.T)) {
-            hit = true;
-        }
+            if (Input.GetKeyDown(KeyCode.R)) {
+                transform.position = new Vector3(0.5f, .01f, 0);
+                hit = false;
+                isAlive = true;
+            }
+            //TODO: ISTO É PARA SER APAGADO DEPOIS
+            if (Input.GetKeyDown(KeyCode.T)) {
+                Die();
+            }
 
-        if (!hasShoot && !isToReturn) {
-            if (Input.GetMouseButtonDown(0)) {
-                Debug.Log(mControl.GetMousePosition().x - transform.position.x);
-                if (mControl.GetMousePosition().x - transform.position.x >= 0) {
-                    ChangeAnimationState(AnimationStates["ThrowRight"]);
-                } else {
-                    ChangeAnimationState(AnimationStates["ThrowLeft"]);
+            if (!hasShoot && !isToReturn && !GameManager.IsGamePaused()) {
+                if (Input.GetMouseButtonDown(0)) {
+                    if (mControl.GetMousePosition().x - transform.position.x >= 0) {
+                        ChangeAnimationState(AnimationStates["ThrowRight"]);
+                    } else {
+                        ChangeAnimationState(AnimationStates["ThrowLeft"]);
+                    }
+                }
+            } else {
+                if (Input.GetMouseButtonDown(0) && !isToReturn) {
+                    TeleportToGear();
+                }
+                if (Input.GetMouseButtonDown(1)) {
+                    ReturnGear();
                 }
             }
-        } else {
-            if (Input.GetMouseButtonDown(0) && !isToReturn) {
-                TeleportToGear();
+
+            if (isToReturn) {
+                if (time < 1.0f) {
+                    gear.transform.position = getBQCPoint(time, gearLastPosition, curvePoint.position, transform.position);
+                    time += Time.deltaTime;
+                }
+                if (Vector3.Distance(transform.position, gear.position) < 0.5f) {
+                    GearCatch();
+                }
             }
-            if (Input.GetMouseButtonDown(1)) {
-                ReturnGear();
+            if (Input.GetKeyDown(KeyCode.Escape)) {
+                GameManager.PauseGame();
+            }
+        } else {
+            if (Input.GetKeyDown(KeyCode.Escape)) {
+                GameManager.ResumeGame();
             }
         }
 
-        if (isToReturn) {
-            if (time < 1.0f) {
-                gear.transform.position = getBQCPoint(time, gearLastPosition, curvePoint.position, transform.position);
-                time += Time.deltaTime;
-            }
-            if (Vector3.Distance(transform.position, gear.position) < 0.5f) {
-                GearCatch();
-            }
-        }
+
     }
 
     private void FixedUpdate() {
-        Vector3 velocity = new Vector3(rb.velocity.x, rb.velocity.y, 0);
 
-        if (!hit) {
-            //Check if Player in on the Ground
-            if (Physics.Raycast(transform.position, Vector3.down, rayDistance)) {
-                if(!isGrounded) {
-                    jumpClip = jumpSounds[Random.Range(0, jumpSounds.Length)];
-                    audioSource.clip = jumpClip;
-                    audioSource.Play();
-                }
-                isGrounded = true;
-            } else {
-                isGrounded = false;
-            }
+        if (!GameManager.IsGamePaused()) {
 
-            //Check Movement Based on Input
-            if (movement.x < 0) {
-                velocity.x = -speedSet[1];
-            } else if (movement.x > 0) {
-                velocity.x = speedSet[1];
-            } else {
-                velocity.x = speedSet[0];
-            }
+            Vector3 velocity = new Vector3(rb.velocity.x, rb.velocity.y, 0);
 
-            //Check if Trying to Jump
-            if (jump && isGrounded) {
-                rb.AddForce(Vector3.up * 1000, ForceMode.Force);
-                jump = false;
-            }
-
-
-            //Animation Control
-            if (isGrounded) {
-                if (movement.x < 0) {
-                    ChangeAnimationState(AnimationStates["RunLeft"]);
-                } else if (movement.x > 0) {
-                    ChangeAnimationState(AnimationStates["RunRight"]);
+            if (!hit) {
+                //Check if Player in on the Ground
+                if (Physics.Raycast(transform.position, Vector3.down, rayDistance)) {
+                    if (!isGrounded) {
+                        jumpClip = jumpSounds[Random.Range(0, jumpSounds.Length)];
+                        audioSource.clip = jumpClip;
+                        audioSource.Play();
+                    }
+                    isGrounded = true;
                 } else {
-                    ChangeAnimationState(AnimationStates["Idle"]);
+                    isGrounded = false;
                 }
+
+                //Check Movement Based on Input
+                if (movement.x < 0) {
+                    velocity.x = -speedSet[1];
+                } else if (movement.x > 0) {
+                    velocity.x = speedSet[1];
+                } else {
+                    velocity.x = speedSet[0];
+                }
+
+                //Check if Trying to Jump
+                if (jump && isGrounded) {
+                    rb.AddForce(Vector3.up * 1000, ForceMode.Force);
+                    jump = false;
+                }
+
+
+                //Animation Control
+                if (isGrounded) {
+                    if (movement.x < 0) {
+                        ChangeAnimationState(AnimationStates["RunLeft"]);
+                    } else if (movement.x > 0) {
+                        ChangeAnimationState(AnimationStates["RunRight"]);
+                    } else {
+                        ChangeAnimationState(AnimationStates["Idle"]);
+                    }
+                } else {
+                    if (movement.x < 0) {
+                        ChangeAnimationState(AnimationStates["JumpLeft"]);
+                    } else if (movement.x > 0) {
+                        ChangeAnimationState(AnimationStates["JumpRight"]);
+                    } else {
+                        ChangeAnimationState(AnimationStates["JumpInPlace"]);
+                    }
+                }
+
+                //Assign new Velocity to Rigidbody
+                rb.velocity = velocity;
             } else {
-                if (movement.x < 0) {
-                    ChangeAnimationState(AnimationStates["JumpLeft"]);
-                } else if (movement.x > 0) {
-                    ChangeAnimationState(AnimationStates["JumpRight"]);
-                } else {
-                    ChangeAnimationState(AnimationStates["JumpInPlace"]);
+                if (isAlive) {
+                    if (movement.x < 0) {
+                        ChangeAnimationState(AnimationStates["DieLeft"]);
+                    } else if (movement.x > 0) {
+                        ChangeAnimationState(AnimationStates["DieRight"]);
+                    } else {
+                        ChangeAnimationState(AnimationStates["DieInPlace"]);
+                    }
+                    isAlive = false;
                 }
             }
 
-            //Assign new Velocity to Rigidbody
-            rb.velocity = velocity;
-        } else {
-            if (isAlive) {
-                if (movement.x < 0) {
-                    ChangeAnimationState(AnimationStates["DieLeft"]);
-                } else if (movement.x > 0) {
-                    ChangeAnimationState(AnimationStates["DieRight"]);
-                } else {
-                    ChangeAnimationState(AnimationStates["DieInPlace"]);
-                }
-                isAlive = false;
+            if (!isAlive) {
+                velocity.x = 0;
+                rb.velocity = velocity;
             }
-        }
-
-        if (!isAlive) {
-            velocity.x = 0;
-            rb.velocity = velocity;
         }
     }
 
 
     public void Die() {
         hit = true;
+        GameManager.PlayerLose();
+    }
+
+    private bool IsAnimatorPlaying() {
+        return animator.GetCurrentAnimatorStateInfo(0).length > animator.GetCurrentAnimatorStateInfo(0).normalizedTime;
     }
 
     /// <summary>
@@ -272,7 +293,7 @@ public class PlayerController : MonoBehaviour {
 
         isToReturn = true;
         gear.GetComponent<Rigidbody>().velocity = Vector3.zero;
-        
+
     }
 
     #region Animator Controller Methods
