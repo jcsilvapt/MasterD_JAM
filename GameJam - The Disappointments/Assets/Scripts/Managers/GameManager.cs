@@ -215,6 +215,9 @@ public class GameManager : MonoBehaviour {
 
     public void UI_Quit() {
         _ChangeScene(0, false);
+        Pause(false);
+        loseMenu.SetActive(false);
+        winMenu.SetActive(false);
     }
 
     public void UI_LoadNextLevel() {
