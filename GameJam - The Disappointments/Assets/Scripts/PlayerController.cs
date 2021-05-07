@@ -279,6 +279,7 @@ public class PlayerController : MonoBehaviour {
     private void GearCatch() {
         hasShoot = false;
         isToReturn = false;
+        gear.GetComponent<Rigidbody>().isKinematic = true;
         gear.SetParent(parentReference);
         gear.GetComponent<Gear>().SetDefaultSize();
         weaponPS.SetActive(false);
@@ -317,8 +318,8 @@ public class PlayerController : MonoBehaviour {
         Rigidbody gearRB = gear.GetComponent<Rigidbody>();
         gearRB.isKinematic = false;
         gear.GetComponent<BoxCollider>().enabled = true;
-        gear.GetComponent<Gear>().SetBigSize();
         gear.SetParent(null);
+        gear.GetComponent<Gear>().SetBigSize();
         weaponPS.SetActive(true);
         gearRB.AddForce(shootFrom.forward * throwPower, ForceMode.Impulse);
     }
