@@ -37,8 +37,31 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private Animator animatorLevelSelectLevelPreview;
     [SerializeField] private Animator animatorLevelSelectBackButton;
 
+    //Options Menu Animator References
+    [SerializeField] private Animator animatorOptionsMenuMasterVolumeBackground;
+    [SerializeField] private Animator animatorOptionsMenuMasterVolumeSlider;
+    [SerializeField] private Animator animatorOptionsMenuMusicVolumeBackground;
+    [SerializeField] private Animator animatorOptionsMenuMusicVolumeSlider;
+    [SerializeField] private Animator animatorOptionsMenuSFXVolumeBackground;
+    [SerializeField] private Animator animatorOptionsMenuSFXVolumeSlider;
+    [SerializeField] private Animator animatorOptionsMenuBackButton;
+
+    //Credits Menu Animator References
+    [SerializeField] private Animator animatorCreditsMenuMadeBy;
+    [SerializeField] private Animator animatorCreditsMenuFabio;
+    [SerializeField] private Animator animatorCreditsMenuJorge;
+    [SerializeField] private Animator animatorCreditsMenuBackButton;
+
+    //Level Selected Text Reference
+    [SerializeField] private Text levelSelectText;
+
+    //Current Level Selected
+    private int currentLevel;
+
     private void Start()
     {
+        currentLevel = 1;
+
         currentMenu = Menu.TitleScreen;
     }
 
@@ -152,6 +175,41 @@ public class MenuManager : MonoBehaviour
 
     #endregion
 
+    #region Level Select
+    public void PreviousButton()
+    {
+        if(currentLevel <= 1)
+        {
+            currentLevel = 4;
+        }
+        else
+        {
+            currentLevel -= 1;
+        }
+
+        levelSelectText.text = "Level " + currentLevel.ToString();
+    }
+
+    public void NextButton()
+    {
+        if (currentLevel >= 4)
+        {
+            currentLevel = 1;
+        }
+        else
+        {
+            currentLevel += 1;
+        }
+
+        levelSelectText.text = "Level " + currentLevel.ToString();
+    }
+
+    public void StartLevel()
+    {
+        GameManager.ChangeScene(currentLevel, false);
+    }
+    #endregion
+
     #endregion
 
     #region Animator Methods
@@ -172,6 +230,21 @@ public class MenuManager : MonoBehaviour
                 animatorLevelSelectRightButton.SetBool("Show", false);
                 animatorLevelSelectLevelPreview.SetBool("Show", false);
                 animatorLevelSelectBackButton.SetBool("Show", false);
+                break;
+            case Menu.OptionsMenu:
+                animatorOptionsMenuMasterVolumeBackground.SetBool("Show", false);
+                animatorOptionsMenuMasterVolumeSlider.SetBool("Show", false);
+                animatorOptionsMenuMusicVolumeBackground.SetBool("Show", false);
+                animatorOptionsMenuMusicVolumeSlider.SetBool("Show", false);
+                animatorOptionsMenuSFXVolumeBackground.SetBool("Show", false);
+                animatorOptionsMenuSFXVolumeSlider.SetBool("Show", false);
+                animatorOptionsMenuBackButton.SetBool("Show", false);
+                break;
+            case Menu.CreditsMenu:
+                animatorCreditsMenuMadeBy.SetBool("Show", false);
+                animatorCreditsMenuFabio.SetBool("Show", false);
+                animatorCreditsMenuJorge.SetBool("Show", false);
+                animatorCreditsMenuBackButton.SetBool("Show", false);
                 break;
         }
     }
