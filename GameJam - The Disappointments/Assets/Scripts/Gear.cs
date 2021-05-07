@@ -16,7 +16,7 @@ public class Gear : MonoBehaviour {
     private AudioSource aSource;
 
 
-    private bool isActive;
+    [SerializeField] private bool isActive;
 
     // Start is called before the first frame update
     void Start() {
@@ -40,15 +40,17 @@ public class Gear : MonoBehaviour {
     }
 
     private void OnTriggerEnter(Collider other) {
-        if (other.tag != "Player") {
-            if (other.tag == "Enemy") {
-                other.GetComponent<IDamage>().TakeDamage();
-                aSource.clip = gearHit;
-                aSource.Play();
-            }
-            if (other.tag == "Floor") {
-                rb.isKinematic = true;
-                isActive = false;
+        if (isActive) {
+            if (other.tag != "Player") {
+                if (other.tag == "Enemy") {
+                    other.GetComponent<IDamage>().TakeDamage();
+                    aSource.clip = gearHit;
+                    aSource.Play();
+                }
+                if (other.tag == "Floor") {
+                    rb.isKinematic = true;
+                    isActive = false;
+                }
             }
         }
     }
@@ -62,6 +64,7 @@ public class Gear : MonoBehaviour {
     }
 
     public void SetDefaultSize() {
+        isActive = false;
         transform.localPosition = defaultLocation;
         transform.localRotation = defaultRotation;
         transform.localScale = defaultScale;
