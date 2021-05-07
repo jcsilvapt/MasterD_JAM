@@ -55,8 +55,13 @@ public class MenuManager : MonoBehaviour
     //Level Selected Text Reference
     [SerializeField] private Text levelSelectText;
 
+    //Level Select Preview Reference
+    [SerializeField] private Image levelSelectImage;
+
     //Current Level Selected
     private int currentLevel;
+
+    [SerializeField] private Sprite[] levelPreviews;
 
     private void Start()
     {
@@ -146,6 +151,11 @@ public class MenuManager : MonoBehaviour
     {
         currentMenu = Menu.LevelSelect;
         HideMainMenuButtons();
+
+        currentLevel = 1;
+
+        levelSelectText.text = "Level " + currentLevel;
+        levelSelectImage.sprite = levelPreviews[currentLevel - 1];
     }
 
     public void OptionsButton()
@@ -188,6 +198,7 @@ public class MenuManager : MonoBehaviour
         }
 
         levelSelectText.text = "Level " + currentLevel.ToString();
+        levelSelectImage.sprite = levelPreviews[currentLevel - 1];
     }
 
     public void NextButton()
@@ -202,6 +213,7 @@ public class MenuManager : MonoBehaviour
         }
 
         levelSelectText.text = "Level " + currentLevel.ToString();
+        levelSelectImage.sprite = levelPreviews[currentLevel - 1];
     }
 
     public void StartLevel()
