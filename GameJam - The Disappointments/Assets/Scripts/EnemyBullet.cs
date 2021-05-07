@@ -11,6 +11,8 @@ public class EnemyBullet : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+
+        Destroy(gameObject, 10f);
     }
 
     // Update is called once per frame

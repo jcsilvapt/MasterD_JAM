@@ -1383,6 +1383,7 @@ MonoBehaviour:
   sizeOnThrow: {x: 0.6, y: 0.6, z: 0.6}
   gearFlying: {fileID: 8300000, guid: 522e3ab7bac86e443bd5721d8933b455, type: 3}
   gearHit: {fileID: 8300000, guid: 7282ca5a2495791438d14a92c68afd17, type: 3}
+  isActive: 0
 --- !u!1 &3894983856614099986
 GameObject:
   m_ObjectHideFlags: 0
@@ -2275,6 +2276,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4605234816749142668}
     m_Modifications:
+    - target: {fileID: 1252619823873030880, guid: 6a69401675d48814587389729358f48c,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1252619823873030880, guid: 6a69401675d48814587389729358f48c,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1252619823873030880, guid: 6a69401675d48814587389729358f48c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1252619823873030880, guid: 6a69401675d48814587389729358f48c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1252619823873030880, guid: 6a69401675d48814587389729358f48c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1252619823873030880, guid: 6a69401675d48814587389729358f48c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1252619823873030880, guid: 6a69401675d48814587389729358f48c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1252619823873030880, guid: 6a69401675d48814587389729358f48c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
     - target: {fileID: 9120737731370577089, guid: 6a69401675d48814587389729358f48c,
         type: 3}
       propertyPath: m_Enabled
